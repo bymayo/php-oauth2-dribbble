@@ -172,9 +172,9 @@ class DribbleResourceOwner implements ResourceOwnerInterface
      * Get resource rebounds count
      * @return int
      */
-    public function getReboundsCount()
+    public function getReboundsReceivedCount()
     {
-        return $this->response['rebounds_count'];
+        return $this->response['rebounds_received_count'];
     }
 
     /**
