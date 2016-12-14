@@ -1,5 +1,5 @@
 <?php
-namespace App\Lib\Dribble;
+namespace CrewLabs\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 

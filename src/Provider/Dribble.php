@@ -1,8 +1,5 @@
 <?php
-namespace App\Lib\Dribble;
-
-use App\Model\Entity\UserProfile;
-use Cake\Network\Http\Client;
+namespace CrewLabs\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\AbstractProvider;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
