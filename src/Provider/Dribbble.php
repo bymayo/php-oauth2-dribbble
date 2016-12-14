@@ -67,8 +67,9 @@ class Dribbble extends AbstractProvider
     protected function checkResponse(ResponseInterface $response, $data)
     {
         if ($response->getStatusCode() >= 400) {
+            $errorString = (isset($data['error'])) ? $data['error'] : $response->getReasonPhrase();
             throw new IdentityProviderException(
-                $data['error'] ?? $response->getReasonPhrase(),
+                $errorString,
                 $response->getStatusCode(),
                 $response
             );
