@@ -11,7 +11,7 @@ This package provides Dribbble OAuth 2.0 support for the PHP League's [OAuth 2.0
 To install, use composer:
 
 ```
-composer require CrewLabs/oauth2-dribbble
+composer require crewlabs/oauth2-dribbble
 ```
 
 ## Usage
