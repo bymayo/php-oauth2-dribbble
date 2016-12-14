@@ -1,6 +1,6 @@
 {
-    "name": "crewlabs/oauth2-dribble",
-    "description": "Dribble OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "name": "crewlabs/oauth2-dribbble",
+    "description": "Dribbble OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
     "keywords": [
         "oauth",
         "oauth2",
@@ -10,6 +10,7 @@
         "identity",
         "sso",
         "single sign on",
+        "Dribbble",
         "Dribble"
     ],
     "license": "MIT",
