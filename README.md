@@ -1,18 +1,18 @@
-# Dribble Provider for OAuth 2.0 Client
+# Dribbble Provider for OAuth 2.0 Client
 
-This package provides Dribble OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
+This package provides Dribbble OAuth 2.0 support for the PHP League's [OAuth 2.0 Client](https://github.com/thephpleague/oauth2-client).
 
 ## Installation
 
 To install, use composer:
 
 ```
-composer require CrewLabs/oauth2-dribble
+composer require CrewLabs/oauth2-dribbble
 ```
 
 ## Usage
 
-Usage is the same as The League's OAuth client, using `\CrewLabs\OAuth2\Client\Provider\Dribble` as the provider.
+Usage is the same as The League's OAuth client, using `\CrewLabs\OAuth2\Client\Provider\Dribbble` as the provider.
 
 ### Authorization Code Flow
 
@@ -21,9 +21,9 @@ Usage is the same as The League's OAuth client, using `\CrewLabs\OAuth2\Client\P
 require_once('./vendor/autoload.php');
 session_start();
 
-$provider = new \CrewLabs\OAuth2\Client\Provider\Dribble([
-    'clientId'          => '{ dribble-client-id }',
-    'clientSecret'      => '{ dribble-secret }',
+$provider = new \CrewLabs\OAuth2\Client\Provider\Dribbble([
+    'clientId'          => '{ dribbble-client-id }',
+    'clientSecret'      => '{ dribbble-secret }',
     'redirectUri'       => 'https://example.com/callback-url',
 ]);
 
@@ -77,15 +77,15 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/CrewLabs/oauth2-dribble/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](https://github.com/CrewLabs/oauth2-dribbble/blob/master/CONTRIBUTING.md) for details.
 
 ## Credits
 
 - [Dave Baker](https://github.com/fullybaked)
 - [Crew Labs](https://github.com/CrewLabs)
-- [All Contributors](https://github.com/CrewLabs/oauth2-dribble/contributors)
+- [All Contributors](https://github.com/CrewLabs/oauth2-dribbble/contributors)
 
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/CrewLabs/oauth2-dribble/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/CrewLabs/oauth2-dribbble/blob/master/LICENSE) for more information.
