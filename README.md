@@ -1,5 +1,4 @@
 # Dribbble Provider for OAuth 2.0 Client
-
 [![Latest Version](https://img.shields.io/github/release/CrewLabs/oauth2-dribbble.svg?style=flat-square)](https://github.com/CrewLabs/oauth2-dribbble/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![Build Status](https://img.shields.io/travis/CrewLabs/oauth2-dribbble/master.svg?style=flat-square)](https://travis-ci.org/CrewLabs/oauth2-dribbble)
