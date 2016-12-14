@@ -1,17 +1,17 @@
 <?php
 namespace CrewLabs\OAuth2\Client\Test\Provider;
 
-use CrewLabs\OAuth2\Client\Provider\Dribble;
+use CrewLabs\OAuth2\Client\Provider\Dribbble;
 use Mockery as m;
 use ReflectionClass;
 
-class DribbleTest extends \PHPUnit_Framework_TestCase
+class DribbbleTest extends \PHPUnit_Framework_TestCase
 {
     protected $provider;
 
     protected static function getMethod($name)
     {
-        $class = new ReflectionClass('CrewLabs\OAuth2\Client\Provider\Dribble');
+        $class = new ReflectionClass('CrewLabs\OAuth2\Client\Provider\Dribbble');
         $method = $class->getMethod($name);
         $method->setAccessible(true);
         return $method;
@@ -19,7 +19,7 @@ class DribbleTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->provider = new Dribble([
+        $this->provider = new Dribbble([
             'clientId'      => 'mock_client_id',
             'clientSecret'  => 'mock_secret',
             'redirectUri'   => 'none',

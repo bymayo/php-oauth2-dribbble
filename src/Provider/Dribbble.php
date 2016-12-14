@@ -8,7 +8,7 @@ use League\OAuth2\Client\Token\AccessToken;
 use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
-class Dribble extends AbstractProvider
+class Dribbble extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
@@ -85,6 +85,6 @@ class Dribble extends AbstractProvider
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
-        return new DribbleResourceOwner($response);
+        return new DribbbleResourceOwner($response);
     }
 }

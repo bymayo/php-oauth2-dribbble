@@ -3,7 +3,7 @@ namespace CrewLabs\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
-class DribbleResourceOwner implements ResourceOwnerInterface
+class DribbbleResourceOwner implements ResourceOwnerInterface
 {
     /**
      * Raw response
