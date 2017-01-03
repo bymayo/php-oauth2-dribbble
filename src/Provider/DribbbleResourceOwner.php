@@ -2,9 +2,12 @@
 namespace CrewLabs\OAuth2\Client\Provider;
 
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
+use League\OAuth2\Client\Tool\ArrayAccessorTrait;
 
 class DribbbleResourceOwner implements ResourceOwnerInterface
 {
+    use ArrayAccessorTrait;
+
     /**
      * Raw response
      *
@@ -29,7 +32,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getId()
     {
-        return $this->response['id'] ?: null;
+        return $this->getValueByKey($this->response, 'id');
     }
 
     /**
@@ -48,7 +51,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getName()
     {
-        return $this->response['name'];
+        return $this->getValueByKey($this->response, 'name');
     }
 
     /**
@@ -57,7 +60,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getUsername()
     {
-        return $this->response['username'];
+        return $this->getValueByKey($this->response, 'username');
     }
 
     /**
@@ -66,7 +69,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getHtmlUrl()
     {
-        return $this->response['html_url'];
+        return $this->getValueByKey($this->response, 'html_url');
     }
 
     /**
@@ -75,7 +78,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getAvatarUrl()
     {
-        return $this->response['avatar_url'];
+        return $this->getValueByKey($this->response, 'avatar_url');
     }
 
     /**
@@ -84,7 +87,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getBio()
     {
-        return $this->response['bio'];
+        return $this->getValueByKey($this->response, 'bio');
     }
 
     /**
@@ -93,7 +96,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getLocation()
     {
-        return $this->response['location'];
+        return $this->getValueByKey($this->response, 'location');
     }
 
     /**
@@ -102,7 +105,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getLinks()
     {
-        return $this->response['links'];
+        return $this->getValueByKey($this->response, 'links');
     }
 
     /**
@@ -111,7 +114,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getBucketCount()
     {
-        return $this->response['buckets_count'];
+        return $this->getValueByKey($this->response, 'buckets_count');
     }
 
     /**
@@ -120,7 +123,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getCommentsReceivedCount()
     {
-        return $this->response['comments_received_count'];
+        return $this->getValueByKey($this->response, 'comments_received_count');
     }
 
     /**
@@ -129,7 +132,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getFollowersCount()
     {
-        return $this->response['followers_count'];
+        return $this->getValueByKey($this->response, 'followers_count');
     }
 
     /**
@@ -138,7 +141,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getFollowingsCount()
     {
-        return $this->response['followings_count'];
+        return $this->getValueByKey($this->response, 'followings_count');
     }
 
     /**
@@ -147,7 +150,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getLikesCount()
     {
-        return $this->response['likes_count'];
+        return $this->getValueByKey($this->response, 'likes_count');
     }
 
     /**
@@ -156,7 +159,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getLikesReceivedCount()
     {
-        return $this->response['likes_received_count'];
+        return $this->getValueByKey($this->response, 'likes_received_count');
     }
 
     /**
@@ -165,7 +168,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getProjectsCount()
     {
-        return $this->response['projects_count'];
+        return $this->getValueByKey($this->response, 'projects_count');
     }
 
     /**
@@ -174,7 +177,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getReboundsReceivedCount()
     {
-        return $this->response['rebounds_received_count'];
+        return $this->getValueByKey($this->response, 'rebounds_received_count');
     }
 
     /**
@@ -183,7 +186,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getShotsCount()
     {
-        return $this->response['shots_count'];
+        return $this->getValueByKey($this->response, 'shots_count');
     }
 
     /**
@@ -192,7 +195,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getTeamsCount()
     {
-        return $this->response['teams_count'];
+        return $this->getValueByKey($this->response, 'teams_count');
     }
 
     /**
@@ -201,7 +204,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function canUploadShot()
     {
-        return ($this->response['can_upload_shot'] == 'true');
+        return ($this->getValueByKey($this->response, 'can_upload_shot') == 'true');
     }
 
     /**
@@ -210,7 +213,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getType()
     {
-        return $this->response['type'];
+        return $this->getValueByKey($this->response, 'type');
     }
 
     /**
@@ -219,7 +222,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function isPro()
     {
-        return ($this->response['pro'] == 'true');
+        return ($this->getValueByKey($this->response, 'pro') == 'true');
     }
 
     /**
@@ -228,7 +231,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getBucketsUrl()
     {
-        return $this->response['buckets_url'];
+        return $this->getValueByKey($this->response, 'buckets_url');
     }
 
     /**
@@ -237,7 +240,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getFollowersUrl()
     {
-        return $this->response['followers_url'];
+        return $this->getValueByKey($this->response, 'followers_url');
     }
 
     /**
@@ -246,7 +249,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getFollowingUrl()
     {
-        return $this->response['following_url'];
+        return $this->getValueByKey($this->response, 'following_url');
     }
 
     /**
@@ -255,7 +258,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getLikesUrl()
     {
-        return $this->response['likes_url'];
+        return $this->getValueByKey($this->response, 'likes_url');
     }
 
     /**
@@ -264,7 +267,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getProjectsUrl()
     {
-        return $this->response['projects_url'];
+        return $this->getValueByKey($this->response, 'projects_url');
     }
 
     /**
@@ -273,7 +276,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getShotsUrl()
     {
-        return $this->response['shots_url'];
+        return $this->getValueByKey($this->response, 'shots_url');
     }
 
     /**
@@ -282,7 +285,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getTeamsUrl()
     {
-        return $this->response['teams_url'];
+        return $this->getValueByKey($this->response, 'teams_url');
     }
 
     /**
@@ -291,7 +294,7 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getCreated()
     {
-        return $this->response['created_at'];
+        return $this->getValueByKey($this->response, 'created_at');
     }
 
     /**
@@ -300,6 +303,6 @@ class DribbbleResourceOwner implements ResourceOwnerInterface
      */
     public function getUpdated()
     {
-        return $this->response['updated_at'];
+        return $this->getValueByKey($this->response, 'updated_at');
     }
 }
